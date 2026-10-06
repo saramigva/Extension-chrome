@@ -48,7 +48,8 @@ it("normaliza lo que pega el usuario", () => {
 it("exporta CSV compatible con Excel en español", () => {
   const lead = {
     url: "http://a.es/", domain: "a.es", name: 'Bar "El; Sol"', country: "ES", score: 60, verdict: "anticuada",
-    signals: [{ id: "no-https", points: 20, pitch: "Sin HTTPS" }], tech: [], analyzedAt: "2026-10-06T00:00:00Z",
+    signals: [{ id: "no-https", points: 20 }], tech: [], analyzedAt: "2026-10-06T00:00:00Z",
+    profile: { name: "x", tagline: "", type: "otro", services: [], paragraphs: [], images: [] },
     contacts: { emails: ["info@a.es"], phones: ["+34958123456"], socials: {}, contactPages: [], hasContactForm: false },
     status: "nuevo", notes: "",
   } as Lead;

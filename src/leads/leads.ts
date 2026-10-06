@@ -1,4 +1,6 @@
 import { deleteLead, loadLeads, saveLead, STATUSES, toCsv, updateLead, type Lead, type LeadStatus } from "../core/leads";
+import { explain } from "../core/analyze";
+import type { Message } from "../core/messages";
 import { scanUrl, toUrl } from "../core/scan";
 import { download, el } from "../ui/dom";
 
@@ -19,6 +21,9 @@ function row(l: Lead): HTMLTableRowElement {
 
   const notes = el("input", { value: l.notes, placeholder: "Llamé el lunes…" });
   notes.onchange = () => void updateLead(l.domain, { notes: notes.value });
+
+  const demo = el("button", { textContent: "Demo" });
+  demo.onclick = () => void chrome.runtime.sendMessage({ type: "demo", analysis: l, shot: false } satisfies Message);
 
   const del = el("button", { textContent: "Borrar" });
   del.onclick = async () => {
@@ -41,11 +46,11 @@ function row(l: Lead): HTMLTableRowElement {
     {},
     el("td", {}, el("strong", {}, l.name), el("br"), el("a", { href: l.url, target: "_blank", rel: "noopener" }, l.domain), el("div", { className: "muted small" }, `${l.country} · ${l.analyzedAt.slice(0, 10)}`)),
     el("td", { className: "num" }, el("span", { className: `tag ${l.verdict}` }, String(l.score))),
-    el("td", {}, el("ul", { className: "list" }, ...l.signals.slice(0, 3).map((s) => el("li", {}, s.pitch)))),
+    el("td", {}, el("ul", { className: "list" }, ...l.signals.slice(0, 3).map((s) => el("li", {}, explain(s))))),
     el("td", {}, contact),
     el("td", {}, status),
     el("td", {}, notes),
-    el("td", {}, del),
+    el("td", {}, el("div", { className: "row" }, demo, del)),
   );
 }
 

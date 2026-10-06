@@ -2,12 +2,27 @@
   "manifest_version": 3,
   "name": "Radar de webs: detecta webs anticuadas y sus contactos",
   "short_name": "Radar de webs",
-  "description": "Analiza si una web está anticuada, te da los argumentos de venta y los contactos públicos del negocio. Todo en tu navegador.",
-  "version": "0.1.0",
+  "description": "Al abrir una web te dice si está anticuada, sus puntos de dolor y contactos, y te prepara el mensaje y una demo antes/después. Todo local.",
+  "version": "0.2.0",
   "minimum_chrome_version": "120",
   "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
   "action": { "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png" } },
-  "permissions": ["activeTab", "scripting", "storage"],
-  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "options_page": "options.html",
+  "permissions": ["activeTab", "scripting", "storage", "unlimitedStorage", "offscreen"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": ["*://*.google.com/search*", "*://*.google.es/search*", "*://*.google.pt/search*"],
+      "js": ["page.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.google.com/search*", "https://www.google.es/search*", "https://www.google.pt/search*"],
+      "js": ["serp.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" }
 }

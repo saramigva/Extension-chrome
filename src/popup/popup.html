@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Radar de webs</title>
-    <link rel="stylesheet" href="ui.css" />
-    <style>body { width: 380px; padding: 12px; } header { margin-bottom: 10px; justify-content: space-between; } .actions { margin-top: 10px; }</style>
+    <link rel="stylesheet" href="report.css" />
+    <style>
+      body { width: 400px; margin: 0; padding: 12px; background: #fff; }
+      @media (prefers-color-scheme: dark) { body { background: #161b26; } }
+      header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+      h1 { font-size: 16px; margin: 0; }
+      .links { display: flex; gap: 10px; font-size: 12px; }
+    </style>
   </head>
-  <body>
-    <header class="row"><h1>Radar de webs</h1><a href="leads.html" target="_blank" id="all">Mis leads →</a></header>
+  <body class="rw">
+    <header><h1>Radar de webs</h1><span class="links"><a href="leads.html" target="_blank">Mis leads</a><a href="options.html" target="_blank">Ajustes</a></span></header>
     <main id="out"><p class="muted">Analizando esta web…</p></main>
     <script type="module" src="popup.js"></script>
   </body>

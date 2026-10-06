@@ -8,7 +8,7 @@ function parse(html: string): Document {
   return new DOMParser().parseFromString(html, "text/html");
 }
 
-function enrich(analysis: Analysis, pages: Array<{ url: string; html: string }>): Analysis {
+export function enrich(analysis: Analysis, pages: Array<{ url: string; html: string }>): Analysis {
   let contacts = analysis.contacts;
   const country = analysis.country === "PT" ? "PT" : "ES";
   for (const p of pages) contacts = mergeContacts(contacts, extractContacts(parse(p.html), p.url, country));
@@ -76,8 +76,11 @@ export function toUrl(input: string): string | null {
   }
 }
 
-/** Analiza una URL desde la extensión (análisis en lote; requiere permiso de hosts). */
-export async function scanUrl(url: string): Promise<Analysis> {
+/**
+ * Analiza una URL desde la extensión (lote y etiquetas de Google).
+ * `lite`: sin visitar la página de contacto (más rápido).
+ */
+export async function scanUrl(url: string, opts: { lite?: boolean } = {}): Promise<Analysis> {
   let t0 = performance.now();
   let res: Response;
   try {
@@ -96,6 +99,7 @@ export async function scanUrl(url: string): Promise<Analysis> {
   const htmlMs = Math.round(performance.now() - t0);
   // res.url es la URL final tras redirecciones (p. ej. http → https).
   const analysis = analyzeDocument(parse(html), html, res.url || url, { loadMs: htmlMs > 4000 ? htmlMs : undefined });
+  if (opts.lite) return analysis;
   const pages: Array<{ url: string; html: string }> = [];
   for (const u of analysis.contacts.contactPages.slice(0, MAX_CONTACT_PAGES)) {
     try {

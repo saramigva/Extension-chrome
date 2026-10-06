@@ -1,0 +1,39 @@
+.rw {
+  --bg: #ffffff; --fg: #101828; --muted: #475467; --border: #d0d5dd; --card: #f9fafb;
+  --accent: #6941c6; --red: #d92d20; --amber: #dc6803; --green: #079455;
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg);
+}
+@media (prefers-color-scheme: dark) {
+  .rw { --bg: #161b26; --fg: #f5f5f6; --muted: #94969c; --border: #333741; --card: #1f242f;
+    --accent: #9e77ed; --red: #f97066; --amber: #fdb022; --green: #47cd89; }
+}
+.rw * { box-sizing: border-box; }
+.rw a { color: var(--accent); }
+.rw button, .rw select, .rw textarea, .rw input {
+  font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px;
+}
+.rw button { cursor: pointer; }
+.rw button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.rw button:disabled { opacity: .6; cursor: default; }
+.rw h2 { font-size: 11px; margin: 12px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.rw .muted { color: var(--muted); }
+.rw .small { font-size: 11px; }
+.rw .row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.rw .score { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); }
+.rw .score .num { font-size: 30px; font-weight: 700; line-height: 1; min-width: 52px; text-align: center; }
+.rw .anticuada .num, .rw .tag.anticuada { color: var(--red); }
+.rw .mejorable .num, .rw .tag.mejorable { color: var(--amber); }
+.rw .moderna .num, .rw .tag.moderna { color: var(--green); }
+.rw .tag { font-weight: 600; }
+.rw ul.signals { margin: 0; padding-left: 18px; }
+.rw ul.signals li { margin: 3px 0; }
+.rw .pts { color: var(--muted); font-size: 11px; }
+.rw .contact { display: flex; justify-content: space-between; gap: 6px; align-items: center; padding: 3px 0; border-bottom: 1px dashed var(--border); word-break: break-all; }
+.rw .contact button { padding: 1px 8px; font-size: 11px; flex: none; }
+.rw .note { border-left: 3px solid var(--amber); background: var(--card); padding: 6px 8px; border-radius: 4px; font-size: 12px; color: var(--muted); margin: 8px 0; }
+.rw .tabs { display: flex; gap: 4px; margin-bottom: 6px; }
+.rw .tabs button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+.rw textarea.draft { width: 100%; min-height: 170px; resize: vertical; font-size: 12px; line-height: 1.4; }
+.rw input.subject { width: 100%; margin-bottom: 4px; font-size: 12px; }
+.rw .best { font-size: 10px; background: var(--green); color: #fff; border-radius: 8px; padding: 0 6px; margin-left: 4px; }
+.rw .error { color: var(--red); }

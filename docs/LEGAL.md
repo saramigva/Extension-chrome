@@ -10,12 +10,16 @@
 ## Contactar
 ### España
 - **Email:** la **LSSI, art. 21** prohíbe enviar comunicaciones comerciales por email sin consentimiento previo, **también a empresas**. La única excepción es si ya son clientes tuyos. Multas de hasta 150.000 € y la AEPD sanciona activamente. Fuentes: [Overloop](https://overloop.com/es/blog/b2b-cold-email-espana-rgpd-aepd), [Legitec](https://legitec.com/envios-comerciales-sin-consentimiento-la-aepd-ya-esta-sancionando-con-hasta-5-000-e/).
-- **Mejor:** llamada al teléfono de empresa, visita en persona o LinkedIn de forma manual. Usar su formulario de contacto para vender es una zona gris: consúltalo si lo vas a hacer a menudo.
+- **WhatsApp y SMS** son también comunicaciones electrónicas: misma regla que el email.
+- **Mejor:** llamada al teléfono de empresa, visita en persona o LinkedIn de forma manual. Envía el email o la demo cuando te den el sí, y apúntalo en las notas del lead como prueba del consentimiento. Usar su formulario de contacto para vender es una zona gris: consúltalo si lo vas a hacer a menudo.
 
 ### Portugal
 - **A empresas** (pessoas coletivas) se les puede escribir, salvo que se hayan opuesto. Antes hay que consultar la **lista nacional de oposición de la DGC**, que se actualiza cada mes (Lei 41/2004, arts. 13.º-A y 13.º-B). Fuente: [Legiscope](https://www.legiscope.com/blog/marketing-eletronico-portugal-prova-oposicao.html).
 - **A personas físicas** (autónomos con email o móvil personal) hace falta consentimiento previo.
 - Incluye siempre una forma sencilla de darse de baja y respeta los "no" para siempre.
+
+## La demo
+- La demo usa los textos, fotos y logo **del propio negocio** para enseñarle una propuesta. Es material suyo: úsala **solo para mostrársela a ese negocio** y no la publiques en ningún sitio sin su permiso.
 
 ## Plataformas
 - No automatiza nada en Google Maps ni en LinkedIn. Sus condiciones prohíben extraer datos de forma automática. Las URLs las pegas tú.

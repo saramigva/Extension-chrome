@@ -1,4 +1,4 @@
-import type { Analysis } from "./analyze";
+import { explain, type Analysis } from "./analyze";
 
 export type LeadStatus = "nuevo" | "contactado" | "interesado" | "descartado" | "cliente";
 export const STATUSES: LeadStatus[] = ["nuevo", "contactado", "interesado", "descartado", "cliente"];
@@ -12,7 +12,8 @@ const KEY = "leads";
 
 export async function loadLeads(): Promise<Lead[]> {
   const raw = (await chrome.storage.local.get(KEY))[KEY] as Record<string, Lead> | undefined;
-  return Object.values(raw ?? {}).sort((a, b) => b.score - a.score || b.analyzedAt.localeCompare(a.analyzedAt));
+  // Leads de la v0.1 (sin ficha del negocio) se descartan: basta con volver a analizarlos.
+  return Object.values(raw ?? {}).filter((l) => l.profile).sort((a, b) => b.score - a.score || b.analyzedAt.localeCompare(a.analyzedAt));
 }
 
 /** Guarda o actualiza por dominio, conservando estado y notas si ya existía. */
@@ -54,7 +55,7 @@ export function toCsv(leads: Lead[]): string {
     l.country,
     l.score,
     l.verdict,
-    l.signals.map((s) => s.pitch).join(" | "),
+    l.signals.map((s) => explain(s)).join(" | "),
     l.contacts.emails.join(", "),
     l.contacts.phones.join(", "),
     Object.values(l.contacts.socials).join(", "),
