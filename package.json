@@ -1,0 +1,22 @@
+{
+  "name": "radar-webs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Detecta webs anticuadas y extrae sus contactos para prospección comercial.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.3.4",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

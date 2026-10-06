@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Radar de webs: detecta webs anticuadas y sus contactos",
+  "short_name": "Radar de webs",
+  "description": "Analiza si una web está anticuada, te da los argumentos de venta y los contactos públicos del negocio. Todo en tu navegador.",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png" } },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'" }
+}
