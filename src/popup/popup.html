@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tramita</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tramita</h1>
+      <button id="toggle-form" class="primary" data-i18n="addManual"></button>
+    </header>
+
+    <form id="form" hidden>
+      <label><span data-i18n="fTitle"></span><input name="title" required maxlength="120" /></label>
+      <label><span data-i18n="fIssuer"></span><input name="issuer" required maxlength="60" list="issuers" /></label>
+      <datalist id="issuers">
+        <option value="AEAT"></option>
+        <option value="DEHú"></option>
+        <option value="DGT"></option>
+        <option value="Seguridad Social"></option>
+        <option value="Portal das Finanças"></option>
+        <option value="ViaCTT"></option>
+      </datalist>
+      <label><span data-i18n="fRule"></span><select name="ruleId"></select></label>
+      <div class="row">
+        <label><span data-i18n="fAvailable"></span><input type="date" name="availableOn" required /></label>
+        <label><span data-i18n="fAccessed"></span><input type="date" name="accessedOn" /></label>
+      </div>
+      <label><span data-i18n="fResponse"></span><select name="preset"></select></label>
+      <div class="row" id="custom" hidden>
+        <label><span data-i18n="fAmount"></span><input type="number" name="amount" min="1" max="999" /></label>
+        <label><span data-i18n="fUnit"></span>
+          <select name="unit">
+            <option value="business-days" data-i18n="unitBusiness"></option>
+            <option value="calendar-days" data-i18n="unitCalendar"></option>
+            <option value="months" data-i18n="unitMonths"></option>
+          </select>
+        </label>
+      </div>
+      <label><span data-i18n="fNotes"></span><textarea name="notes" rows="2" maxlength="500"></textarea></label>
+      <p class="hint" data-i18n="holidayHint"></p>
+      <button class="primary" type="submit" data-i18n="save"></button>
+    </form>
+
+    <main id="list"></main>
+
+    <footer>
+      <p data-i18n="disclaimer"></p>
+      <p data-i18n="privacy"></p>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+{
+  "extName": {
+    "message": "Tramita: plazos de notificaciones (ES/PT)"
+  },
+  "extDescription": {
+    "message": "Calcula y te avisa de los plazos de tus notificaciones electrónicas (DEHú, AEAT, Portal das Finanças, ViaCTT). 100% local."
+  },
+  "addManual": {
+    "message": "+ Añadir"
+  },
+  "fTitle": {
+    "message": "Asunto"
+  },
+  "fIssuer": {
+    "message": "Organismo"
+  },
+  "fRule": {
+    "message": "Tipo de notificación"
+  },
+  "fAvailable": {
+    "message": "Puesta a disposición"
+  },
+  "fAccessed": {
+    "message": "La abrí el (opcional)"
+  },
+  "fResponse": {
+    "message": "Plazo para responder"
+  },
+  "fAmount": {
+    "message": "Cantidad"
+  },
+  "fUnit": {
+    "message": "Unidad"
+  },
+  "fNotes": {
+    "message": "Notas"
+  },
+  "unitBusiness": {
+    "message": "días hábiles"
+  },
+  "unitCalendar": {
+    "message": "días naturales"
+  },
+  "unitMonths": {
+    "message": "meses"
+  },
+  "presetNone": {
+    "message": "Solo vigilar la notificación"
+  },
+  "presetCustom": {
+    "message": "Otro (indica el plazo del documento)"
+  },
+  "presetEsReposicion": {
+    "message": "Recurso de reposición tributario (1 mes)"
+  },
+  "presetEsAlegaciones10": {
+    "message": "Alegaciones / subsanación (10 días hábiles)"
+  },
+  "presetPtReclamacaoGraciosa": {
+    "message": "Reclamación graciosa PT (120 días)"
+  },
+  "presetPtAudicaoPrevia": {
+    "message": "Audiencia previa PT (15 días, comprueba el oficio)"
+  },
+  "ruleEsLey39": {
+    "message": "Notificación electrónica (10 días naturales, art. 43 Ley 39/2015)"
+  },
+  "rulePtNotificacao": {
+    "message": "Notificación electrónica PT (día 15, art. 39 CPPT)"
+  },
+  "rulePtCitacao": {
+    "message": "Citación electrónica PT (día 5, art. 39 CPPT)"
+  },
+  "holidayHint": {
+    "message": "Se tienen en cuenta solo los festivos nacionales. Si en tu comunidad o municipio hay otro festivo, el plazo real puede ser un día más largo: nunca más corto."
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "empty": {
+    "message": "No sigues ninguna notificación. Entra en tu buzón (DEHú, AEAT, Portal das Finanças, ViaCTT) y Tramita te propondrá las que encuentre, o añádelas a mano."
+  },
+  "availableOn": {
+    "message": "Puesta a disposición"
+  },
+  "notifiedOn": {
+    "message": "Se considera notificada"
+  },
+  "basisAccessed": {
+    "message": "la abriste"
+  },
+  "basisPresumed": {
+    "message": "presunción legal"
+  },
+  "keyResponse": {
+    "message": "Último día para responder"
+  },
+  "keyNotified": {
+    "message": "Se da por notificada"
+  },
+  "stDone": {
+    "message": "Hecho"
+  },
+  "stOverdue": {
+    "message": "Vencido hace $n$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "stToday": {
+    "message": "¡Vence hoy!"
+  },
+  "stDaysLeft": {
+    "message": "Quedan $n$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "markDone": {
+    "message": "Marcar hecho"
+  },
+  "reopen": {
+    "message": "Reabrir"
+  },
+  "calendar": {
+    "message": "Calendario"
+  },
+  "delete": {
+    "message": "Borrar"
+  },
+  "confirmDelete": {
+    "message": "¿Borrar esta notificación de Tramita? (No afecta a la notificación oficial.)"
+  },
+  "source": {
+    "message": "Fuente"
+  },
+  "detected": {
+    "message": "detectada"
+  },
+  "dismiss": {
+    "message": "Cerrar"
+  },
+  "foundN": {
+    "message": "$n$ posibles notificaciones en esta página",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "detectHint": {
+    "message": "Revisa la fecha: es la más antigua de cada fila. Desmarca lo que no sea una notificación."
+  },
+  "addSelected": {
+    "message": "Seguir las marcadas"
+  },
+  "addedN": {
+    "message": "Añadidas: $n$. Ábrelas en el icono de Tramita.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "notifOverdue": {
+    "message": "venció el $d$",
+    "placeholders": {
+      "d": {
+        "content": "$1"
+      }
+    }
+  },
+  "notifToday": {
+    "message": "vence HOY"
+  },
+  "notifSoon": {
+    "message": "vence en $n$ días",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "errAccessedBefore": {
+    "message": "La fecha de apertura no puede ser anterior a la de puesta a disposición."
+  },
+  "errAmount": {
+    "message": "Indica un plazo válido (número entero mayor que 0)."
+  },
+  "errSafTitle": {
+    "message": "Error SAF de AutoFirma"
+  },
+  "errSafFix": {
+    "message": "Cierra el navegador, abre AutoFirma > Herramientas > Preferencias > General > Configuración de red y desactiva «Aceptar solo conexiones con sitios seguros». Alternativa: entra con Cl@ve Permanente."
+  },
+  "errAutofirmaTitle": {
+    "message": "AutoFirma no responde"
+  },
+  "errAutofirmaFix": {
+    "message": "Comprueba que AutoFirma está instalado y actualizado (descárgalo solo de la web oficial), ciérralo del todo y vuelve a intentarlo. Si sigue fallando, reinstálalo con el navegador cerrado."
+  },
+  "errSessionTitle": {
+    "message": "Sesión caducada"
+  },
+  "errSessionFix": {
+    "message": "Muchas sedes cierran la sesión tras unos 30 minutos. Cierra el navegador por completo (o usa una ventana de incógnito) y empieza el trámite de nuevo; ten los documentos preparados antes."
+  },
+  "errSessionFixPt": {
+    "message": "Vuelve a autenticarte. Si usas Chave Móvel Digital, ten el móvil a mano: el código caduca en pocos minutos."
+  },
+  "errPtPluginTitle": {
+    "message": "Falta el plugin Autenticação.gov"
+  },
+  "errPtPluginFix": {
+    "message": "Para usar el Cartão de Cidadão con lector necesitas instalar el plugin oficial de autenticacao.gov.pt y reiniciar el navegador. Alternativa: Chave Móvel Digital o contraseña del portal."
+  },
+  "disclaimer": {
+    "message": "Tramita no es una herramienta oficial ni asesoramiento jurídico. Los cálculos son orientativos: comprueba siempre los plazos en la propia notificación y en la sede."
+  },
+  "privacy": {
+    "message": "Tus datos no salen de este navegador: sin servidores, sin analítica."
+  }
+}

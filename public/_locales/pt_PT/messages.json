@@ -1,0 +1,227 @@
+{
+  "extName": {
+    "message": "Tramita: prazos de notificações (ES/PT)"
+  },
+  "extDescription": {
+    "message": "Calcula e avisa dos prazos das suas notificações eletrónicas (DEHú, AEAT, Portal das Finanças, ViaCTT). 100% local."
+  },
+  "addManual": {
+    "message": "+ Adicionar"
+  },
+  "fTitle": {
+    "message": "Assunto"
+  },
+  "fIssuer": {
+    "message": "Entidade"
+  },
+  "fRule": {
+    "message": "Tipo de notificação"
+  },
+  "fAvailable": {
+    "message": "Data de disponibilização"
+  },
+  "fAccessed": {
+    "message": "Abri em (opcional)"
+  },
+  "fResponse": {
+    "message": "Prazo para responder"
+  },
+  "fAmount": {
+    "message": "Quantidade"
+  },
+  "fUnit": {
+    "message": "Unidade"
+  },
+  "fNotes": {
+    "message": "Notas"
+  },
+  "unitBusiness": {
+    "message": "dias úteis"
+  },
+  "unitCalendar": {
+    "message": "dias seguidos"
+  },
+  "unitMonths": {
+    "message": "meses"
+  },
+  "presetNone": {
+    "message": "Só vigiar a notificação"
+  },
+  "presetCustom": {
+    "message": "Outro (indique o prazo do documento)"
+  },
+  "presetEsReposicion": {
+    "message": "Recurso de reposição tributário ES (1 mês)"
+  },
+  "presetEsAlegaciones10": {
+    "message": "Alegações ES (10 dias úteis)"
+  },
+  "presetPtReclamacaoGraciosa": {
+    "message": "Reclamação graciosa (120 dias)"
+  },
+  "presetPtAudicaoPrevia": {
+    "message": "Audição prévia (15 dias, confirme no ofício)"
+  },
+  "ruleEsLey39": {
+    "message": "Notificação eletrónica ES (10 dias, art. 43 Lei 39/2015)"
+  },
+  "rulePtNotificacao": {
+    "message": "Notificação eletrónica (15.º dia, art. 39.º CPPT)"
+  },
+  "rulePtCitacao": {
+    "message": "Citação eletrónica (5.º dia, art. 39.º CPPT)"
+  },
+  "holidayHint": {
+    "message": "Só são considerados feriados nacionais. Feriados municipais podem tornar o prazo real um dia mais longo: nunca mais curto."
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "empty": {
+    "message": "Não está a seguir nenhuma notificação. Entre na sua caixa (Portal das Finanças, ViaCTT, DEHú, AEAT) e o Tramita propõe as que encontrar, ou adicione-as manualmente."
+  },
+  "availableOn": {
+    "message": "Disponibilizada em"
+  },
+  "notifiedOn": {
+    "message": "Considera-se notificada"
+  },
+  "basisAccessed": {
+    "message": "abriu-a"
+  },
+  "basisPresumed": {
+    "message": "presunção legal"
+  },
+  "keyResponse": {
+    "message": "Último dia para responder"
+  },
+  "keyNotified": {
+    "message": "Considera-se notificada"
+  },
+  "stDone": {
+    "message": "Tratado"
+  },
+  "stOverdue": {
+    "message": "Expirou há $n$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "stToday": {
+    "message": "Termina hoje!"
+  },
+  "stDaysLeft": {
+    "message": "Faltam $n$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "markDone": {
+    "message": "Marcar tratado"
+  },
+  "reopen": {
+    "message": "Reabrir"
+  },
+  "calendar": {
+    "message": "Calendário"
+  },
+  "delete": {
+    "message": "Apagar"
+  },
+  "confirmDelete": {
+    "message": "Apagar esta notificação do Tramita? (Não afeta a notificação oficial.)"
+  },
+  "source": {
+    "message": "Fonte"
+  },
+  "detected": {
+    "message": "detetada"
+  },
+  "dismiss": {
+    "message": "Fechar"
+  },
+  "foundN": {
+    "message": "$n$ possíveis notificações nesta página",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "detectHint": {
+    "message": "Confirme a data: é a mais antiga de cada linha. Desmarque o que não for uma notificação."
+  },
+  "addSelected": {
+    "message": "Seguir as marcadas"
+  },
+  "addedN": {
+    "message": "Adicionadas: $n$. Veja-as no ícone do Tramita.",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "notifOverdue": {
+    "message": "terminou a $d$",
+    "placeholders": {
+      "d": {
+        "content": "$1"
+      }
+    }
+  },
+  "notifToday": {
+    "message": "termina HOJE"
+  },
+  "notifSoon": {
+    "message": "termina em $n$ dias",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "errAccessedBefore": {
+    "message": "A data de abertura não pode ser anterior à de disponibilização."
+  },
+  "errAmount": {
+    "message": "Indique um prazo válido (número inteiro maior que 0)."
+  },
+  "errSafTitle": {
+    "message": "Erro SAF do AutoFirma"
+  },
+  "errSafFix": {
+    "message": "Feche o navegador, abra o AutoFirma > Ferramentas > Preferências > Geral > Configuração de rede e desative «Aceitar só ligações a sítios seguros». Alternativa: Cl@ve Permanente."
+  },
+  "errAutofirmaTitle": {
+    "message": "O AutoFirma não responde"
+  },
+  "errAutofirmaFix": {
+    "message": "Confirme que o AutoFirma está instalado e atualizado (descarregue só do site oficial), feche-o e tente de novo. Se continuar, reinstale com o navegador fechado."
+  },
+  "errSessionTitle": {
+    "message": "Sessão expirada"
+  },
+  "errSessionFix": {
+    "message": "Muitas sedes fecham a sessão após ~30 minutos. Feche o navegador por completo (ou use uma janela anónima) e recomece; tenha os documentos preparados antes."
+  },
+  "errSessionFixPt": {
+    "message": "Volte a autenticar-se. Se usa Chave Móvel Digital, tenha o telemóvel à mão: o código expira em poucos minutos."
+  },
+  "errPtPluginTitle": {
+    "message": "Falta o plugin Autenticação.gov"
+  },
+  "errPtPluginFix": {
+    "message": "Para usar o Cartão de Cidadão com leitor instale o plugin oficial em autenticacao.gov.pt e reinicie o navegador. Alternativa: Chave Móvel Digital ou senha do portal."
+  },
+  "disclaimer": {
+    "message": "O Tramita não é uma ferramenta oficial nem aconselhamento jurídico. Os cálculos são indicativos: confirme sempre os prazos na própria notificação e no portal."
+  },
+  "privacy": {
+    "message": "Os seus dados não saem deste navegador: sem servidores, sem analítica."
+  }
+}

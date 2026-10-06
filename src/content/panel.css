@@ -1,0 +1,34 @@
+:host { all: initial; }
+.stack {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 380px;
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1d2939;
+}
+.card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-left: 4px solid #1570ef;
+  border-radius: 8px;
+  padding: 10px 32px 10px 12px;
+  box-shadow: 0 4px 16px rgb(16 24 40 / 0.15);
+}
+.card.error { border-left-color: #d92d20; }
+details.card { padding-right: 12px; }
+summary { cursor: pointer; font-weight: 600; }
+p { margin: 6px 0; }
+.hint, .status { color: #475467; font-size: 12px; }
+ul { list-style: none; padding: 0; margin: 6px 0; max-height: 220px; overflow: auto; }
+li { margin: 4px 0; }
+a { color: #175cd3; }
+button { font: inherit; cursor: pointer; }
+.primary { background: #1570ef; color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; }
+.primary:disabled { opacity: 0.6; cursor: default; }
+.close { position: absolute; top: 4px; right: 6px; background: none; border: 0; font-size: 18px; color: #667085; }

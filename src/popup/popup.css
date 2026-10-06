@@ -1,0 +1,60 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1d2939;
+  --muted: #475467;
+  --border: #d0d5dd;
+  --accent: #1570ef;
+  --red: #d92d20;
+  --amber: #dc6803;
+  --green: #079455;
+  --card: #f9fafb;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161b26;
+    --fg: #f5f5f6;
+    --muted: #94969c;
+    --border: #333741;
+    --accent: #53b1fd;
+    --red: #f97066;
+    --amber: #fdb022;
+    --green: #47cd89;
+    --card: #1f242f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  width: 400px;
+  margin: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+h1 { font-size: 18px; margin: 0; }
+button { font: inherit; cursor: pointer; border: 1px solid var(--border); background: var(--card); color: var(--fg); border-radius: 6px; padding: 4px 10px; }
+.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.danger { color: var(--red); }
+form { display: flex; flex-direction: column; gap: 8px; padding: 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; }
+form[hidden], #custom[hidden] { display: none; }
+label { display: flex; flex-direction: column; gap: 2px; color: var(--muted); flex: 1; }
+input, select, textarea { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 5px 6px; }
+.row { display: flex; gap: 8px; }
+.hint, footer { color: var(--muted); font-size: 11px; }
+.item { border: 1px solid var(--border); border-left: 4px solid var(--green); border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; background: var(--card); }
+.item.soon { border-left-color: var(--amber); }
+.item.today, .item.overdue { border-left-color: var(--red); }
+.item.done { opacity: 0.6; border-left-color: var(--border); }
+.top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.badge { white-space: nowrap; font-weight: 600; }
+.overdue .badge, .today .badge { color: var(--red); }
+.soon .badge { color: var(--amber); }
+.meta { margin: 2px 0; color: var(--muted); }
+.meta.strong { color: var(--fg); font-weight: 600; }
+.actions { display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+.actions a { color: var(--accent); }
+.empty { color: var(--muted); text-align: center; padding: 24px 8px; }
+footer { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 6px; }
+footer p { margin: 4px 0; }
