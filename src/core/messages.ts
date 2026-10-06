@@ -16,7 +16,10 @@ export type Message =
   | { type: "save-lead"; analysis: Analysis }
   | { type: "demo"; analysis: Analysis; tabId?: number; shot?: boolean } // captura "antes" y abre la demo
   | { type: "summarize"; url: string } // resultados de Google → background
-  | { type: "offscreen-scan"; target: "offscreen"; url: string };
+  | { type: "collect"; analysis: Analysis } // página → background: guardar en la bandeja (modo proactivo)
+  | { type: "hunt-now" } // ajustes/bandeja → background: ejecutar el radar ya
+  | { type: "offscreen-scan"; target: "offscreen"; url: string }
+  | { type: "offscreen-analyze"; target: "offscreen"; url: string };
 
 export function summarize(a: Analysis): Summary {
   return { domain: a.domain, score: a.score, verdict: a.verdict, top: a.signals.slice(0, 3).map((s) => s.id), ts: Date.now() };

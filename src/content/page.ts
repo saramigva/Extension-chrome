@@ -122,6 +122,9 @@ async function main(): Promise<void> {
   analysis = analyzeNow();
   await send({ type: "analysis", analysis });
   const settings = await loadSettings();
+  if (settings.collectWhileBrowsing && analysis.score >= settings.threshold && !SKIP_HOSTS.test(location.hostname)) {
+    void withContactPages(analysis).then((full) => send({ type: "collect", analysis: full }));
+  }
   if (settings.autoPanel && analysis.score >= settings.threshold && !SKIP_HOSTS.test(location.hostname)) {
     await showPanel(analysis, false);
   }

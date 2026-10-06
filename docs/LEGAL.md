@@ -21,5 +21,10 @@
 ## La demo
 - La demo usa los textos, fotos y logo **del propio negocio** para enseñarle una propuesta. Es material suyo: úsala **solo para mostrársela a ese negocio** y no la publiques en ningún sitio sin su permiso.
 
+## OpenStreetMap (radar automático)
+- Los datos de negocios tienen licencia **ODbL**: hay que citar «© OpenStreetMap contributors». La extensión lo muestra en Ajustes y en la bandeja. Si compartes el CSV, mantén esa atribución.
+- Normas de uso de los servidores públicos: [Nominatim](https://operations.osmfoundation.org/policies/nominatim/) (máximo 1 petición por segundo, nada de geocodificación masiva) y [Overpass](https://dev.overpass-api.de/overpass-doc/en/preface/commons.html) (uso moderado y sin peticiones en paralelo; para uso comercial intensivo recomiendan un servidor propio o un proveedor). El radar hace muy pocas consultas: cada zona se geocodifica una vez y se consulta como mucho una vez por semana.
+- Teléfonos y emails de OpenStreetMap: las mismas reglas de contacto de arriba.
+
 ## Plataformas
 - No automatiza nada en Google Maps ni en LinkedIn. Sus condiciones prohíben extraer datos de forma automática. Las URLs las pegas tú.

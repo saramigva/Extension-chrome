@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mis leads · Radar de webs</title>
+    <title>Bandeja de leads · Radar de webs</title>
     <link rel="stylesheet" href="report.css" />
     <style>
       body { padding: 16px; max-width: 1280px; margin: 0 auto; background: var(--bg); }
@@ -23,7 +23,7 @@
   </head>
   <body class="rw">
     <header class="row" style="justify-content: space-between">
-      <h1>Mis leads</h1>
+      <div><h1>Bandeja de leads</h1><div id="radar" class="small muted"></div></div>
       <div class="row">
         <select id="filter">
           <option value="">Todos los estados</option>
@@ -33,7 +33,7 @@
     </header>
 
     <details id="bulk-box">
-      <summary>Analizar una lista de webs</summary>
+      <summary>Analizar una lista de webs (opcional)</summary>
       <p class="muted small">Pega una web por línea (dominio o URL). Se descargan desde tu navegador, de 3 en 3. Chrome te pedirá permiso para acceder a webs la primera vez.</p>
       <textarea id="bulk" placeholder="restaurante-ejemplo.es&#10;www.oficina-ejemplo.pt"></textarea>
       <div class="row"><button id="bulk-run" class="primary">Analizar</button><span id="bulk-status" class="muted"></span></div>
@@ -42,12 +42,13 @@
     <div class="wrap">
       <table>
         <thead>
-          <tr><th>Web</th><th>Nota</th><th>Motivos principales</th><th>Contacto</th><th>Estado</th><th>Notas</th><th></th></tr>
+          <tr><th>Web</th><th>Origen</th><th>Nota</th><th>Motivos principales</th><th>Contacto</th><th>Estado</th><th>Notas</th><th></th></tr>
         </thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
-    <p id="empty" class="muted" hidden>Aún no hay leads. Abre una web, pulsa el icono de Radar y «Guardar lead», o analiza una lista arriba.</p>
+    <p id="empty" class="muted" hidden>Aún no hay leads. Activa el radar automático en <a href="options.html">Ajustes</a> (elige zona y sectores) o busca negocios en Google: las webs anticuadas aparecerán aquí solas.</p>
+    <p class="small muted">Negocios del radar: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a> (ODbL).</p>
     <script type="module" src="leads.js"></script>
   </body>
 </html>
